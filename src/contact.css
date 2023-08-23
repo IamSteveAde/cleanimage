@@ -1,0 +1,221 @@
+.contact_container{
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+.address_container, .form_container{
+    width: 50%;
+}
+.form_container{
+    padding-top: 5px;
+}
+.address_container{
+    box-sizing: border-box;
+    padding-right: 35px;
+}  
+.email_container, .location_container, .phone_container, .social_container{
+    display: flex;
+    align-items: flex-start;
+    
+    width: fit-content;
+}
+.email_container{
+    cursor: pointer;
+}
+.email_container a, .location_container a, .phone_container a{
+    margin-top: 0px;
+    color: #000;
+}
+.email_container p, .location_container p, .phone_container p, .social_container p{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+.location_container p {
+    gap: 15px;
+}
+.email_container:hover a{
+    color: #EF1514;
+}
+.email_container i{
+    font-size: 16px;
+}
+.location_container i, .phone_container i, .social_container i{
+    font-size: 22px;
+}
+.location_container{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.address_container div{
+    display: flex;
+    align-items: flex-start;
+    padding-right: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.address_container div img{
+    margin-right: 10px;
+    width: 20px;
+}
+.form_container{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.input_container{
+    display: flex;
+    justify-content: space-between;
+}
+.input_container:first-of-type{
+    padding-top: 10px;
+}
+.user_box {
+    position: relative;
+    width: 47%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+input:-webkit-autofill, 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill, 
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus{
+  transition: background-color 5000s;
+  -webkit-text-fill-color: black !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-family: poppins !important;
+  font-size: inherit;
+  cursor: white;
+}
+.user_box input, .other_container textarea {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #2f3239;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    /* border-bottom: 1px solid #2f3239; */
+    background: transparent;
+}
+.user_box input:hover, .other_container textarea:hover{
+    background-color: #f8f6f6;
+}
+.user_box input:focus, .other_container textarea:focus{
+    background-color: #f8f6f6;
+}
+/* .other_container textarea{
+    height: 35px;
+} */
+.user_box label {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    padding: 10px 5px;
+    font-size: 16px;
+    color: #2f3239;
+    pointer-events: none;
+    transition: .5s;
+}
+.other_container{
+    width: 100%;
+    position: relative;
+}
+.user_box input:focus ~ label, .user_box input:valid ~ label,
+.user_box textarea:focus ~ label, .user_box textarea:valid ~ label {
+    top: -25px!important;
+    left: 0;
+    color: #2f3239;
+    font-size: 12px;
+    border-radius: 0;
+}
+#firstname_inputfield, #lastname_inputfield, #email_inputfield, #tel_inputfield,
+#subject_inputfield, #message_textarea{
+    border: 0px;
+    outline: 0px;
+    border-radius: 0%;
+    border-bottom: 1px solid #2f3239;
+}
+input[type=submit]{
+    width: 100%;
+    padding: 15px 0px !important;
+    text-align: center;
+    font-size: 14px;
+    background-color: #EF1514;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+input[type=submit]:hover{
+    background-color: #ad0f0f;
+}
+#correct_response, #error_response{
+    text-align: center;
+    margin-bottom: 0px;
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .address_container, .form_container{
+        width: 100%;
+    }
+    .contact_container{
+        padding: 30px 0 50px;
+    }
+    .address_container{
+        padding-right: 0px;
+    }
+    /* .address_container p{
+        font-size: 16px;
+    } */
+    .user_box{
+        margin-bottom: 5px;
+        /* width: 4%; */
+       box-sizing: border-box;
+    }
+    .user_box input, .other_container textarea{
+        margin-bottom: 15px;
+        font-size: 16px;
+        /* overflow: hidden; */
+    }
+    #send_message_button{
+        padding: 15px 0px !important;
+        height: 51px;
+        box-sizing: border-box;
+    }
+    .user_box label{
+        font-size: 16px;
+    }
+    input[type=button]{
+        margin-top: 10px;
+    }
+    .other_container{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .address_container, .form_container{
+        width: 100%;
+    }
+    .form_container{
+        padding-top: 10px;
+    }
+    .address_container{
+        padding-right: 0;
+    }
+}

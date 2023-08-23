@@ -1,0 +1,699 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+    font-family: montserrat;
+    
+}
+
+.discover-button {
+    background-image: linear-gradient(rgb(29, 29, 246),rgb(29, 29, 246));
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: .4s;
+}
+.discover-button:hover {
+    background-size: 100% 100%;
+}
+.dots_section{
+    width: fit-content;
+    height: 550px;
+    padding: 0px 0px 30px 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='15' width='15'%3E%3Ccircle cx='5' cy='5' r='2' fill='%23b91c1c' /%3E%3C/svg%3E ");
+    fill: rgb(29, 29, 246) !important;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}
+
+@keyframes in-circle-swoop {
+  from {
+    clip-path: var(--circle-top-right-out);
+  }
+  to {
+    clip-path: var(--circle-bottom-right-in);
+  }
+}
+
+.--in-custom {
+  --transition__duration: 2s;
+  --transition__easing: ease-in-out;
+  animation-name: in-circle-swoop;
+}
+
+@keyframes out-circle-swoop {
+  from {
+    clip-path: var(--circle-bottom-right-in);
+  }
+  to {
+    clip-path: var(--circle-top-right-out);
+  }
+}
+.--out-custom {
+  --transition__duration: 2s;
+  --transition__easing: ease-in-out;
+  animation-name: out-circle-swoop;
+}
+
+.first_dots_section{
+  width: 100%;
+  height: 350px;
+  /* padding: 0px 0px px 30px; */
+  margin-bottom: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='15' width='15'%3E%3Ccircle cx='5' cy='5' r='2' fill='%23b91c1c' /%3E%3C/svg%3E ");
+  fill: rgb(29, 29, 246) !important;
+}
+/* Plus button */
+
+/* .ico-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #b91c1c;
+    transition: all .20s cubic-bezier(0.4, 0.0, 0.2, 1);
+    border-radius: 100%;
+    border: 2px solid; 
+  }
+  
+  .ico-btn__plus{
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: all .25s cubic-bezier(0.4, 0.0, 0.2, 1);
+    color: white;
+  }
+  
+  .ico-btn__plus::after{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: all .25s cubic-bezier(0.4, 0.0, 0.2, 1);
+    color: white;
+    transform: rotate(90deg);
+  }
+  
+  .ico-btn.is-active .ico-btn__plus{
+    transform: rotate(135deg);
+  } */
+  
+  .arrow-icon {
+    background-color: rgb(29, 29, 246);
+    height: 35px;
+    width: 35px;
+    display: block;
+    padding: 0.5em;
+    position: relative;
+    cursor: pointer;
+    border-radius: 100%;
+  }
+  
+  .left-bar {
+    position: absolute;
+    background-color: transparent;
+    top: 16px;
+    left: 5px;
+    width: 15px;
+    height: 3px;
+    display: block;
+    transform: rotate(40deg);
+    float: right;
+    border-radius: 2px;
+  }
+  .left-bar:after {
+    content: "";
+    background-color: white;
+    width: 15px;
+    height: 3px;
+    display: block;
+    float: right;
+    border-radius: 6px 10px 10px 6px;
+    transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+    z-index: -1;
+  }
+  
+  .right-bar {
+    position: absolute;
+    background-color: transparent;
+    top: 15.6px;
+    right: 5px;
+    width: 13px;
+    height: 3px;
+    display: block;
+    transform: rotate(-40deg);
+    float: right;
+    border-radius: 2px;
+  }
+  .right-bar:after {
+    content: "";
+    background-color: white;
+    width: 15px;
+    height: 3px;
+    display: block;
+    float: right;
+    border-radius: 10px 6px 6px 10px;
+    transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+    z-index: -1;
+  }
+  
+  .open .left-bar:after {
+    transform-origin: center center;
+    transform: rotate(-75deg);
+  }
+  .open .right-bar:after {
+    transform-origin: center center;
+    transform: rotate(75deg);
+  }
+
+.dropdown_info{
+    max-height: 0;
+    transition: max-height 0.25s ease-in-out;
+    overflow: hidden;
+}
+.open .dropdown_info{
+    max-height: 100px;
+    transition: max-height 0.25s ease-in-out;
+}
+.hamburger{
+  background-color: rgb(29, 29, 246) !important;
+  color: white !important;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+.hamburger-box{
+  width: 30px !important;
+}
+.hamburger-inner{
+  left: -5px !important;
+  /* right: 0 !important; */
+  /* bottom: 0 !important; */
+  top: 10.5px !important;
+  /* margin: auto !important; */
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+  background-color: white !important;
+  width: 30px !important;
+  height: 3px !important;
+}
+
+#spin:after {
+  content:"";
+  animation: spin 8s linear infinite;
+}
+@keyframes spin {
+  0% { content:"WE ARE";}
+  30% { content:"CLEAN IMAGE LIMITED,";}
+  /* 40% { content:"WE ARE";} */
+  60% { content: "TRANSCENDENT,"; }
+  /* 80% { content: "WE ARE"; } */
+  90% { content: "BEYOND ORDINARY."; }
+}
+.customshadow{
+  box-shadow: 2px 2px 2px 2px rgb(171, 171, 171);
+}
+.why{
+  background-image: linear-gradient(to right, rgba(6, 6, 117, 0.253), rgba(14, 3, 165, 0.379));
+}
+@keyframes shake{
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(5px); }
+}
+
+/* Apply the animation to the image */
+.shake{
+  animation: shake 1.5s ease infinite;
+}
+.bounces {
+  animation: bounce 2s infinite;
+}
+
+/* Define the animation keyframes for the bounce effect */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-50px);
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.float {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translate(0, 0);
+  }
+  50% {
+      transform: translate(0, -10px);
+  }
+}
+
+    /* Define the styles for the image */
+  .float {
+      
+      transition: filter 0.3s ease; /* Add a smooth transition effect */
+  }
+
+  /* Apply the grayscale filter when hovering */
+  .float {
+      filter: grayscale(100%);
+  }
+  .text-reveal{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-right-color: transparent;
+    }
+    50% {
+      border-right-color: orange;
+    }
+  }
+
+  .box {
+    
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .box:hover {
+    transform: scale(1.1);
+    background-color: #e74c3c;
+  }
+
+  .card {
+    perspective: 1000px;
+    width: 30rem;
+    height: 23rem;
+    margin-right: 10px;
+    
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  .front img{
+   
+  }
+  
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+   
+   
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    background: #3498db;
+    color: white;
+  }
+  .front h2 {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    bottom: 0px; /* Adjust the top value to position the text where you want it */
+    padding-left: 10px;
+    background-color: black;
+    width: 100%;
+    
+  }
+  
+  .back {
+    background: black;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  /* Style the benefits list */
+.benefits-list {
+  list-style: none;
+  padding: 0;
+ 
+  justify-content: space-around;
+}
+
+/* Style each benefit item */
+.benefit-item {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-image: url(./images/4853479.jpg);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Add a hover effect */
+.benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the benefit icons */
+.benefit-icon img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  filter: grayscale(50%); /* Apply grayscale effect */
+  transition: filter 0.3s;
+}
+
+/* Add a hover effect for icons */
+.benefit-item:hover .benefit-icon img {
+  filter: grayscale(0%);
+}
+
+/* Style benefit titles and descriptions */
+.benefit-text h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.benefit-text p {
+  
+}
+.container {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 1.2em;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+/* Center the form container */
+.container {
+  max-width: 400px;
+ 
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-2px) skewY(-2deg); /* Apply hover skew effect */
+}
+/* Center the form container */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: black;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+
+.container3 {
+  text-align: center;
+  
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 0,auto;
+}
+
+.container3 h1 {
+  font-size: 1.5em;
+}
+
+.container3 button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.container3 button:hover {
+  background-color: #2980b9;
+}
+.counters{
+  
+  width: 30%;
+}
+
+.counter {
+  
+  color: #3498db;
+  display: flex;
+  align-items: center; /* Center horizontally */
+  transition: color 0.3s, background-color 0.3s; /* Add smooth transitions */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.counter:hover {
+  background-color: #3498db; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+/* Add some spacing for the symbols */
+.counter::after {
+  content: '';
+  margin-left: 5px;
+}
+
+
+.container4 {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.customer4 h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.reviews-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews-wrapper {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.review {
+  flex: 0 0 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.controls {
+  position: relative;
+  top: 50%;
+  margin-top: 20px;
+  left: 0;
+  right: 0;
+}
+
+.prev-btn,
+.next-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: #2980b9;
+}
+
+.slide-indicators {
+  margin-top: 10px;
+}
+
+.slide-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.container4 .active {
+  background-color: #3498db;
+}

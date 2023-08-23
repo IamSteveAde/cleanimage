@@ -1,0 +1,205 @@
+.container .card img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+.containers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+    
+}
+.card{
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.intro{
+    height: 100px;
+    width: 300px;
+    padding: 1px;
+    box-sizing: border-box;
+    position: absolute;
+    background: rgba(41, 1, 1, 0.534);
+    color: white;
+    bottom: 50px;
+    transition: 0.2s;
+    border-radius: 10px;
+    
+}
+.containers .container h1{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.card:hover{
+    cursor: pointer;
+    background: rgb(27,27,27, .5);
+}
+.containers .container p{
+    visibility: hidden;
+    opacity: 0;
+    color: white;
+    margin: 10px;
+}
+.card:hover .intro{
+    height: 170px;
+    bottom: 50px;
+    background: rgb(27,27,27, .5);
+    
+    
+} 
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+    
+}
+.card:hover img{
+    transform: scale(1.1) rotate(-3deg);
+}
+
+
+
+.container1 .card1 img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.card1{
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.intro1{
+    height: 100px;
+    width: 300px;
+    padding: 1px;
+    box-sizing: border-box;
+    position: absolute;
+    background: rgb(41,1,1, 0.534);
+    color: white;
+    bottom: 50px;
+    transition: 0.2s;
+    border-radius: 10px;
+    
+}
+.containers .container1 h1{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.card1:hover{
+    cursor: pointer;
+    background: rgb(27,27,27, .5);
+}
+.containers .container1 p{
+    visibility: hidden;
+    opacity: 0;
+    color: white;
+    margin: 10px;
+}
+.card1:hover .intro1{
+    
+        height: 170px;
+        bottom: 50px;
+        background: rgb(27,27,27, .5);
+    
+    
+} 
+.card1:hover p{
+    opacity: 1;
+    visibility: visible;
+    
+}
+.card1:hover img{
+    transform: scale(1.1) rotate(-3deg);
+}
+
+/* Mobile Screen */
+@media only screen and (max-width: 600px) {
+    .container .card img{
+        height: 300px;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .containers {
+        display: grid;
+        grid-template-columns: repeat(1,minmax (0, 1fr));
+        left: -12%;
+        border-radius: 10px;
+        gap: -2000px;
+        width: 100%;
+        justify-content: left;
+        align-items: left;
+        
+    }
+    
+    
+    
+    .container1 .card1 img{
+        height: 300px;
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .card1{
+        margin: 50px;
+        box-shadow: 5px 5px 20px black;
+        overflow: hidden;
+        border-radius: 10px;
+        width: 100%;
+    }
+    .intro1{
+        height: 90px;
+        width: 100%;
+        padding: 1px;
+        box-sizing: border-box;
+        position: absolute;
+        background: rgba(41, 1, 1, 0.534);
+        color: white;
+        bottom: 50px;
+        transition: 0.2s;
+        border-radius: 10px;
+    }
+    .containers .container1 h1{
+        margin: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .card1:hover{
+        cursor: pointer;
+        background: rgb(27,27,27, .5);
+    }
+    .containers .container1 p{
+        visibility: hidden;
+        opacity: 0;
+        color: white;
+        margin: 10px;
+    }
+    .card1:hover .intro1{
+        height: 170px;
+        bottom: 50px;
+        background: rgb(27,27,27, .5);
+        
+        
+    } 
+    .card1:hover p{
+        opacity: 1;
+        visibility: visible;
+        
+    }
+    .card1:hover img{
+        transform: scale(1.1) rotate(-3deg);
+    }
+
+
+}
+
+
