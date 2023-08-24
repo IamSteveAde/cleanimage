@@ -2,6 +2,7 @@
 module.exports = {
   content: ["./*.html"],
   theme: {
+   
     extend: {
       colors: {
         'dark-bg':'hsl(0 0% 30% / 0.25)',
