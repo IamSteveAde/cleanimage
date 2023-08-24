@@ -387,6 +387,7 @@ body{
     background: rgb(46, 4, 152);
     color: white;
     transform: rotateY(180deg);
+    padding-top: 10%;
   }
 
   /* Style the benefits list */
@@ -569,7 +570,7 @@ button:hover {
 
 .container3 {
   text-align: center;
-  
+  background-color: rgba(0, 0, 255, 0.036);
   padding: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -599,21 +600,13 @@ button:hover {
   width: 30%;
 }
 
-.counter {
-  
-  color: #3498db;
+.counter { 
   display: flex;
-  align-items: center; /* Center horizontally */
-  transition: color 0.3s, background-color 0.3s; /* Add smooth transitions */
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+  
+  
 }
 
-.counter:hover {
-  background-color: #3498db; /* Change background color on hover */
-  color: white; /* Change text color on hover */
-}
+
 
 /* Add some spacing for the symbols */
 .counter::after {
@@ -697,3 +690,67 @@ button:hover {
 .container4 .active {
   background-color: #3498db;
 }
+.schedule{
+  left: 40%;
+}
+@media (max-width: 576px) {
+  .schedule{
+    left: 20%;
+  }
+  .why{
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+    left: -20px;
+    
+  }
+  .sub{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  #mob{
+    background-image: url('./../src/images/bacmob.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+
+  .gin{
+    width: 100%;
+    left: 10px;
+    position: relative;
+  }
+  .benefit-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    left: 5px;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  .card{
+    width: 90%;
+    position: relative;
+    left: 30px;
+  }
+
+}
+@media (max-width: 768px) {
+ 
+
+}
+@media (max-width: 992px) {
+  
+
+}
+#mob{
+    background-image: url('./../src/images/5442676.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
