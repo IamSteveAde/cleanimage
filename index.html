@@ -1,717 +1,331 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/dist/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+    <link rel="stylesheet" href="./src/main.css">
+    <link rel="stylesheet" href="./src/home.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://kit.fontawesome.com/fbef12b2c8.js" crossorigin="anonymous"></script>
-    <!-- <script src="./src/script.js"></script> -->
-    <!-- <link href="/dist/hamburgers.css" rel="stylesheet"> -->
-    <link href="dist/hamburgers.css" rel="stylesheet">
-    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <title>Responsive Navigation</title>
 </head>
-<body class="bg-white">
-    <div class="bg-custom-red fixed z-[999] w-full h-full flex flex-col items-center justify-center preloader_bg">
-        <!-- <img class=" w-full h-full" src="./src/images/rotate_AdobeExpress.gif" alt="" /> -->
-        <p class="w-11/12 text-center text-[34px] sm:text-[46px] md:text-[56px] text-white font-garamond font-semibold h-fit m-auto"><span id="spin"></span></p>
+<body>
+    <div id="loader-container">
+        <div id="loader"></div>
+        <div id="loader-text"><P> CLEAN IMAGE LIMITED.</P></div>
     </div>
-    <div class="h-screen w-full relative">
-        <div class="absolute top-0 py-6 w-11/12  left-0 z-[100] right-0 mx-auto flex flex-row items-center justify-between">
-            <img class="w-[10rem]" src="./src/images/PHOTO-2023-08-17-07-43-39-removebg-preview.png" />
-            <div class="relative cursor-pointer z-[100]" >
-                <button class="hamburger hamburger--spin" type="button" onclick="toggleNavbar">
-                    <span class="hamburger-box">
-                      <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-                
-            </div>
-            <div id="sideBar" transition-style class="sideBar --in-custom fixed h-[100vh] z-[49] font-garamond bg-custom-red left-0 right-0 top-0 bottom-0 mx-auto flex flex-col items-center justify-center overflow-hidden opacity-100 transition-all ease-in duration-500 hidden" >
-                <div class="flex flex-col gap-2 md:gap-0 text-[34px] sm:text-[46px] md:text-[56px] font-semibold w-full h-fit text-center items-center justify-center text-white">
-                   <a href="index.html"> <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Home</p></a>
-                    <a href="about.html"> <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">About</p></a>
-                        <a href="services.html">  <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Our Services</p></a>
-                            <a href="index.html">  <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Fan Zone</p></a>
-                                <a href="index.html"> <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Sport Creative</p></a>
-                                    <a href="contact.html"> <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Contact</p></a>
-                </div>
-            </div>
+    <div class="tope">
+        <div class="logo" style="color: white;"><h2>Logo</h2></div>
+        <div class="cca">
+            <a href="#" class="charging-button">BUY NOW</a>
         </div>
+    </div>
+    <div class="navs">
+       
         
-        <video id="bg_video" class="w-screen h-screen sm:h-screen absolute object-cover z-[-100] brightness-50" preload="auto" autoPlay loop muted playsInline>
-            <source src="./src/videos/Produce_6.mp4" type="video/mp4" />
-        </video>
-        <div class="max-[935px]:hidden absolute z-10 right-20 top-0 bottom-0 my-auto w-fit h-10 overflow-hidden text-white flex gap-3 items-center">
-            <div class="customPrevBtn h-full group flex cursor-pointer items-center relative">
-                <p class="cursor-pointer group-hover:-translate-y-8 transition-all ease-in w-full py-3">Prev</p>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon line w-10 absolute h-10 hidden group-hover:block" viewBox="0 0 24 24"><path d="M21 12H3m3-3-3 3 3 3" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5"/></svg>
-            </div>
-            <div class="w-12 bg-white h-0.5"></div>
-            <div class="customNextBtn h-full group flex cursor-pointer items-center relative">
-                <p class="cursor-pointer group-hover:-translate-y-8 transition-all ease-in w-full py-3 ">Next</p>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon line w-10 absolute h-10 hidden group-hover:block rotate-180" viewBox="0 0 24 24"><path d="M21 12H3m3-3-3 3 3 3" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5"/></svg>
-            </div>
-        </div>
-        <div class="absolute left-[4%] bottom-10 flex items-start gap-1 overflow-hidden font-serif">
-            <p class="text-white font-semibold -ml-3.5 text-5xl">0<span id="currentSlide">1</span> </p><span class="text-sm align-super text-white font-medium">/3</span>
-        </div>
-        <div class="owl-carousel owl-theme ">
-            <div class="item">
-                <div class="w-11/12  mx-auto h-screen flex items-center">
-                    <div class=" sm:w-full md:w-[700px] md:min-w-[700px] h-fit space-y-5">
-                        <h1 class="text-[34px] sm:text-[46px] md:text-[46px] font-semibold text-white font-garamond leading-none">
-                           Clean Image Limited
-                        </h1>
-                        <p class="text-white text-[20px] font-garamond">
-                            At Clean Image Limited, we provide the world with an alternative, sustainable energy solution that doesn't compromise on efficiency. With our Digital Magnetic Inducer Generator, you're
-                            not just investing in the future of your energy needs, but you're also contributing to a cleaner planet.
-                        </p>
-                        <p class="text-white px-6 py-3 border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg font-garamond backdrop-blur-sm">Schedule Consultation</p> 
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="w-11/12  mx-auto h-screen flex items-center">
-                    <div class=" sm:w-full md:w-[700px] md:min-w-[700px] h-fit space-y-5">
-                        <h1 class="text-[34px] sm:text-[46px] md:text-[46px] font-semibold text-white font-garamond leading-none">
-                            Efficiency Redefined
-                        </h1>
-                        <p class="text-white text-[20px] font-garamond">
-                            Our Digital Magnetic Inducer Generator is at the forefront of energy technology. With unmatched efficiency, it converts mechanical energy into electrical power with minimal loss.
-                             Say goodbye to energy wastage and hello to optimized power generation.
-                        </p>
-                        <p class="text-white px-6 py-3 border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg font-garamond backdrop-blur-sm">Schedule Consultation</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="w-11/12  mx-auto h-screen flex items-center">
-                    <div class=" sm:w-full md:w-[700px] md:min-w-[700px] h-fit space-y-5">
-                        <h1 class="text-[34px] sm:text-[46px] md:text-[46px] font-semibold text-white font-garamond leading-none">
-                            Eco-friendly Power
-                        </h1>
-                        <p class="text-white text-[20px] font-medium font-garamond">
-                            Reduce your carbon footprint and reliance on fossil fuels. Clean Image's technology harnesses the power of magnets,
-                             eliminating the need for harmful emissions or costly fuel sources. Join us in the fight against climate change.
-                        <p class="text-white px-6 py-3 border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg font-garamond backdrop-blur-sm">Schedule Consultation</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="pt-8 md:pt-16 w-full md:w-11/12 mx-auto bg-white bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden">
-        <div class="pb-8 md:pb-16 w-11/12 mx-auto md:w-full" >
-            <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-black mx-auto mb-0" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">Our Product Range</h1>
-            <div class="w-10 h-1 bg-custom-red rounded-full mx-auto -mt-2 mb-6"> </div>
-            
-             
-        </div>
-        <!--Products range-->
-        <div class="text-white text-[22px] sm:text-[46px] md:text-[23px] sm:grid md:flex lg:flex xl:flex">
-            <div class="card font-garamond sm:w-[25rem] md:w-[20rem] lg:w-[30rem] xl:w-[30rem]">
-                <div class="card-inner">
-                  <div class="front"><img src="./src/images/house-isolated-field.jpg" class="w-[250rem] h-[23rem] ">
-                    <h2 class="text-[23px] font-garamond font-bold">Residential Solution</h2>
-                
-                </div>
-                  <div class="back px-10 py-6"><i class="fa-solid fa-house fa-lg"></i><h2 class="text-[25px] font-bold  text-reveal my-3">Residential Solution</h2>
-                    <p class="sm:text-[18px] md:text[20px] lg:text-[23px] xl:text-[23px]">Power your home sustainably with our range of residential generators.
-                         Say goodbye to skyrocketing energy bills and hello to energy independence.</p></div>
-                </div>
-            </div>
-            <div class="card font-garamond sm:w-[25rem] md:w-[20rem] lg:w-[30rem] xl:w-[30rem]" >
-                <div class="card-inner">
-                  <div class="front"><img src="./src/images/skyscrapers-from-low-angle-view.jpg" class="w-[250rem] h-[23rem] ">
-                    <h2 class="text-[25px] font-garamond font-bold">Commercial Generators</h2>
-                </div>
-                  <div class="back px-10 py-6"><i class="fa-solid fa-building-columns fa-lg"></i><h2 class="text-[25px] font-bold  text-reveal my-3">Commercial Generators</h2>
-                    <p>From small businesses to large corporations, 
-                        our commercial generators are tailored to meet your energy needs efficiently and reliably..</p></div>
-                </div>
-            </div>
-            <div class="card font-garamond sm:w-[25rem] md:w-[20rem] lg:w-[30rem] xl:w-[30rem]">
-                <div class="card-inner">
-                  <div class="front"><img src="./src/images/agricultural-silos-building-exterior.jpg" class="w-[250rem] h-[23rem] ">
-                    <h2 class="text-[25px] font-garamond font-bold">Industrial Solutions</h2>
-                </div>
-                  <div class="back px-10 py-6"><i class="fa-solid fa-industry fa-lg"></i><h2 class="text-[25px] font-bold  text-reveal my-3">Industrial Solutions</h2>
-                    <p>For heavy-duty applications, our industrial generators are up to the task.
-                        They provide the power you need to keep your operations running smoothly.</p></div>
-                </div>
-            </div>
-
-            
-            <!--<div class="border-2 mx-3 px-10 py-6 customshadow font-garamond">
-                <img src="./src/images/house-isolated-field.jpg" class="w-[250rem] rounded-md">
-                <h2 class="text-[25px] my-3">Residential Solutions</h2>
-                <p>Power your home sustainably with our range of residential generators.
-                     Say goodbye to skyrocketing energy bills and hello to energy independence.</p>
-            </div>
-            <div class="border-2 px-10 py-6 customshadow  font-garamond">
-                <img src="./src/images/skyscrapers-from-low-angle-view.jpg" class="w-[250rem] rounded-md">
-                <h2 class="text-[25px] my-3">Commercial Generators</h2>
-                <p>From small businesses to large corporations, 
-                    our commercial generators are tailored to meet your energy needs efficiently and reliably..</p>
-            </div>
-            <div class="border-2 mx-3 px-10 py-6 customshadow font-garamond">
-                <img src="./src/images/agricultural-silos-building-exterior.jpg" class="w-[250rem] rounded-md">
-                <h2 class="text-[25px] my-3">Industrial Solutions</h2>
-              
-                <p>For heavy-duty applications, our industrial generators are up to the task.
-                     They provide the power you need to keep your operations running smoothly.</p>
-            </div>-->
-            
-        </div>
-        <p class="schedule text-grey px-6 py-3 my-8 relative   border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg backdrop-blur-sm">Schedule Consultation</p>
-
+        <button id="nav-toggle" class="nav-button">
+            <span id="icon-bars">&#9776;</span>
+            <span id="icon-close" class="hidden">&#10006;</span>
+        </button>
         
 
-
-
-
-       <!-- <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4"> 
-            <div class="row-span-1 col-span-2 sm:col-span-1 sm:row-span-2  md:row-span-1 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/omar-ram-IvXnC7u6yD0-unsplash.jpg" alt="" />
-            </div>
-            <div class="row-span-2 col-span-2 md:col-span-1 overflow-hidden" data-aos="zoom-out
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/medium-shot-smiley-goalkeeper.jpg" alt="" />
-            </div>
-            <div class="sm:col-span-2 row-span-2 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/fauzan-saari-crn276hbbYU-unsplash.jpg" alt="" />
-            </div>
-            <div class="row-span-1 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/fauzan-saari-Y_upPEyxXN8-unsplash.jpg" alt="" />
-            </div>
-            <div class="row-span-1 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/jannik-skorna-mY2ZHBU6GRk-unsplash.jpg" alt="" />
-            </div>
-            <div class="col-span-2 sm:col-span-1 row-span-1 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/jannik-skorna-rrIcdUpghyM-unsplash.jpg" alt="" />
-            </div>
-            <div class="col-span-2 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/omar-ram-tr5IM2lmryw-unsplash.jpg" alt="" />
-            </div>
-        </div>-->
-    </div>
-    <div class="pt-8 md:pt-16 w-full md:w-11/12 mx-auto bg-white bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden">
-        
-       <!-- <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4"> 
-            <div class="row-span-1 col-span-2 sm:col-span-1 sm:row-span-2  md:row-span-1 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/omar-ram-IvXnC7u6yD0-unsplash.jpg" alt="" />
-            </div>
-            <div class="row-span-2 col-span-2 md:col-span-1 overflow-hidden" data-aos="zoom-out
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/medium-shot-smiley-goalkeeper.jpg" alt="" />
-            </div>
-            <div class="sm:col-span-2 row-span-2 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/fauzan-saari-crn276hbbYU-unsplash.jpg" alt="" />
-            </div>
-            <div class="row-span-1 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/fauzan-saari-Y_upPEyxXN8-unsplash.jpg" alt="" />
-            </div>
-            <div class="row-span-1 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/jannik-skorna-mY2ZHBU6GRk-unsplash.jpg" alt="" />
-            </div>
-            <div class="col-span-2 sm:col-span-1 row-span-1 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/jannik-skorna-rrIcdUpghyM-unsplash.jpg" alt="" />
-            </div>
-            <div class="col-span-2 overflow-hidden" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/omar-ram-tr5IM2lmryw-unsplash.jpg" alt="" />
-            </div>
-        </div>-->
-    </div>
-    <div class="pt-8 md:pt-16 w-full md:w-11/12 mx-auto   bg-cover bg-no-repeat bg-center bg-fixed font-garamond" id="mob">
-        <div class="pb-8 md:pb-16 w-11/12 mx-auto md:w-full" >
-            <h1 class="w-fit font-bold text-[24px] sm:text-[46px] md:text-[36px] my-8 font-garamond text-white px-10" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">Why Choose Us?</h1>
-            <div class="sm:grid md:grid lg:flex xl:flex ">
-                <div class="why box px-10 py-8 rounded-[5px] sm:my-[10px] text-[20px] mx-6 text-white">
-                    <i class="fa-solid fa-people-group fa-2xl "></i>
-                    <p class="py-6">Expertise: Our team of experts has spent years perfecting the art of magnetic induction technology.
-                        We're passionate about what we do and dedicated to delivering the best possible solutions
-                    </p>
-                </div>
-                <div class="why box px-10 py-8 rounded-[5px] sm:my-[10px] text-[20px] mx-6 text-white">
-                    <i class="fa-solid fa-thumbs-up fa-2xl"></i>
-                    <p class="py-6">Customer-Centric: Your satisfaction is our top priority.
-                        We work closely with you to understand your unique energy requirements and provide tailored solutions.
-                    </p>
-                </div>
-                <div class="why box px-10 py-8 rounded-[5px] sm:my-[10px] text-[20px] mx-6 text-white">
-                    <i class="fa-solid fa-smog fa-2xl"></i>
-                    <p class="py-6">Environmental Stewardship: We are committed to protecting the planet. 
-                        Our eco-friendly technology reflects our dedication to a greener, more sustainable future.
-                    </p>
-                </div>
-
-                
-
-            </div>
-            <p class="schedule text-white text-[25px] px-6 py-3 my-8 relative left-[40%] border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg backdrop-blur-sm">Schedule Consultation</p>
-
-
-            
-          <!-- <div class="text-white text-[25px] w-[70%] px-10">
-            <p><i class="fa-solid fa-check-to-slot "></i> Expertise: Our team of experts has spent years perfecting the art of magnetic induction technology.
-                We're passionate about what we do and dedicated to delivering the best possible solutions.</p><br>
-            <p> <i class="fa-solid fa-check-to-slot"></i> Customer-Centric: Your satisfaction is our top priority.
-                 We work closely with you to understand your unique energy requirements and provide tailored solutions.</p><br>
-            <p><i class="fa-solid fa-check-to-slot"></i> Environmental Stewardship: We are committed to protecting the planet. 
-                Our eco-friendly technology reflects our dedication to a greener, more sustainable future.</p>
-           </div>-->
-        </div>
-     
-    </div>
-    <!--About-->
-    <div class="bg-white">
-        <h1 class=" shake w-fit font-bold text-[34px] text-center my-6 sm:text-[46px] md:text-[56px] font-garamond text-black mx-auto mb-0" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">Powering the Future, Sustainably and Efficiently
-        </h1>
-        <div class="sm:grid md:grid lg:flex xl:flex float" >
-            <div class="bg-wite-image sm:w-[100%] md:w-[100%] lg:w-[30%] xl:w-[30%]  bg-cover bg-no-repeat bg-center bg-fixed py-8 px-10 text-[20px] relative lg:mx-[190px] xl:mx-[190px] md:mx-[10px] sm:mx-[10px] rounded-[20px] my-8 font-garamond">
-                <h1  class="font-bold text-[34px] text-reveal">At Clean Image</h1>
-                <p>We are dedicated to shaping a cleaner, more sustainable world through cutting-edge technology.
-                     Our digital magnetic inducer generators are at the forefront of this mission, 
-                     revolutionizing the way we harness and utilize energy.
-                     Join us on this journey towards a greener and more efficient future.</p>
-                     <h1  class="font-bold text-[34px] text-reveal">Our Mission</h1>
-                <p>Our mission is simple: to drive innovation in the energy sector, 
-                    while minimizing our carbon footprint. We believe in a future where 
-                    energy generation is not just efficient, but also environmentally responsible. Our digital magnetic
-                     inducer generators are the embodiment of this vision, offering numerous benefits for a sustainable tomorrow.</p>
-            </div>
-
-            <div class="lg:w-[30%] sm:w-[100%] md:w-[100%] xl:w-[30%]  rounded-[20px]">
-                <img src="./src/images/diesel.jpg" class="gin rounded-[20px] my-8 h-fit float">
-
-            </div>
-            
-        </div>
-        
-        <div class="font-garamond text-[20px] float ">
-            <h1 class=" shake w-fit font-bold text-[24px] text-center my-6 sm:text-[46px] md:text-[46px] font-garamond text-black mx-auto mb-0" data-aos="zoom-out"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">WHY USE OUR DIGITAL MAGNETIC INDUCER GENERATOR
-        </h1>
-            <ul class="benefits-list sm:grid md:grid lg:flex xl:flex">
-                <li class="benefit-item bg-wite-image lg:w-[30%] xl:w-[30%] md:w-[100%] sm:w-[100%] lg:m-[10px] xl:m-[10px] md:m-[0px] sm:m-[0px]">
-                    <div class="benefit-icon">
-                        <i class="fa-solid fa-lightbulb fa-2xl"></i>
-                    </div>
-                    <div class="benefit-text">
-                        <h3 class="py-4">SUSTAINABILITY</h3>
-                        <p>Our generators are designed to significantly reduce carbon emissions,
-                             making them a sustainable choice for power generation. 
-                            By harnessing the power of magnetic induction, we're paving the way for a cleaner environment.</p>
-                    </div>
-                </li>
-                
-                <li class="benefit-item bg-wite-image lg:w-[30%] xl:w-[30%] md:w-[100%] sm:w-[100%] lg:m-[10px] xl:m-[10px] md:m-[0px] sm:m-[0px]">
-                    <div class="benefit-icon">
-                        <i class="fa-solid fa-dumbbell fa-2xl"></i>
-                    </div>
-                    <div class="benefit-text">
-                        <h3 class="py-4">EFFICIENCY</h3>
-                        <p> Efficiency is at the core of our technology. Our generators convert energy with unmatched precision,
-                             resulting in minimal energy wastage and lower operational costs.</p>
-                    </div>
-                </li>
-                <li class="benefit-item bg-wite-image lg:w-[30%] xl:w-[30%] md:w-[100%] sm:w-[100%] lg:m-[10px] xl:m-[10px] md:m-[0px] sm:m-[0px]">
-                    <div class="benefit-icon">
-                        <i class="fa-solid fa-hand-fist fa-2xl"></i>
-                    </div>
-                    <div class="benefit-text">
-                        <h3 class="py-4">RELIABILITY</h3>
-                        <p>With state-of-the-art engineering, our generators are built to last. They require minimal maintenance, ensuring uninterrupted power supply for years to come.</p>
-                    </div>
-                </li>
-                <!-- Add more benefit items -->
+        <nav id="main-nav" class="hidden">
+            <ul >
+                <li ><a href="#">(01) HOME <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                <li><a href="#">(02) ABOUT <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                <li><a href="#">(03) SERVICES <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                <li><a href="#">(04) CONTACT <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
             </ul>
-        </div>
-                
-
-    </div>
-
-    <div class=" relative h-fit bg-wite-image">
-        <div class=" h-fit w-11/12 py-8 md:py-16 mx-auto space-y-3">
-            <div class="w-fit mx-auto md:ml-0 flex flex-row items-center gap-3 mb-2" data-aos="slide-right"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-quart">
-                <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
-                <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond mt-0 pt-0 mb-0 py-0" >CLEAN IMAGE</h1>
-                <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
-            </div>
-            <div class="">
-                <div class="flex flex-row gap-8 align-baseline">
-                    <p class="text-base font-medium mb-5" data-aos="zoom-out"
-                    data-aos-duration="900"
-                    data-aos-easing="ease-out-quart">
-                    Our dedicated team of engineers and researchers is committed to staying at 
-                    the forefront of technological advancements. With a focus on renewable and sustainable solutions, 
-                    we are redefining the future of power generation.
-                        <!-- Our mission is to continue to design sports related projects, corporate branding strategy and
-                        create profitable platforms for our clients through innovations,
-                        application of technology and real time engagement of professionals in the industry to deliver transparent and seamless sport projects. 
-                        Our vision is to use sports, culture and effective marketing communication to create a common bond among people, nations and its private sector economy through the development of 
-                        sustainable and competitive platforms for mutually beneficial collaborations.-->
-                    </p>
-                   <a href="services.html"> <p class="hidden md:block px-6 py-3 border border-gray-500 min-w-fit cursor-pointer text-base discover-button  backdrop-blur-sm text-black font-semibold h-fit">Discover</p></a>
-                   </div>
-                <div class="mb-3 group service_container" data-aos="slide-up"
-                data-aos-duration="900"
-                data-aos-easing="ease-out-quart">
-                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
-                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500" >Sustainability: A Priority</p>
-                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
-                            <!-- <p class="font-semibold text-base text-custom-red ">Marketing and Brand Communication</p> -->
-                            <span class="left-bar"></span>
-                            <span class="right-bar"></span>
-                        </div>
-                    </div>
-                    <div class="dropdown_info transition-all ease-in-out">
-                        <p class="py-3"> 
-                            We understand the urgency of addressing climate change. That's why we're committed 
-                            to reducing our own carbon footprint and helping our customers do the same. Our generators are a testament to our 
-                            dedication to sustainability, enabling businesses to transition to cleaner energy sources seamlessly. 
-                        </p>
-                    </div>
-                </div>
-                <div class="mb-3 group service_container" data-aos="slide-up"
-                data-aos-duration="900"
-                data-aos-easing="ease-out-quart">
-                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
-                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Efficiency: The Core of Our Technology</p>
-                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
-                            <span class="left-bar"></span>
-                            <span class="right-bar"></span>
-                        </div>
-                    </div>
-                    <div class="dropdown_info">
-                        <p class="py-3"> 
-                            Efficiency is not just a buzzword for us; it's a cornerstone of our technology. Our generators optimize energy conversion,
-                             making them the ideal choice for businesses seeking to maximize energy efficiency and reduce operational costs.
-                        </p>
-                    </div>
-                </div>
-                <div class="mb-3 group service_container" data-aos="slide-up"
-                data-aos-duration="900"
-                data-aos-easing="ease-out-quart">
-                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
-                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Explore Our Website</p>
-                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
-                            <span class="left-bar"></span>
-                            <span class="right-bar"></span>
-                        </div>
-                    </div>
-                    <div class="dropdown_info">
-                        <p class="py-3"> 
-                            Navigating through our website is easy and intuitive. Whether you're here to learn more about our technology, explore our product offerings, 
-                            or stay updated with the latest industry news, you'll find clear and user-friendly navigation.</p>
-                    </div>
-                </div>
-                
-              <a href="services.html">  <p class="md:hidden block px-6 py-3 border border-gray-500 w-fit mx-auto cursor-pointer text-base discover-button mt-8 backdrop-blur-sm text-black font-semibold h-fit">Read More</p></a> 
-            </div>       
-        </div>
-        <div class="container3 lg:w-[50%] xl:w-[50%] sm:w-[100%] md:w-[100%] relative lg:left-[25%] xl:left-[25%] sm:left-[0%] md:left-[0%] font-garamond my-8 flex float">
-            <div class="counters mx-6">
-                <h1 class="text-[25px] font-bold text-[34px]">Projects Completed</h1>
-                <div class="counter text-[25px] font-bold text-[34px]" id="project-counter">
-                    0+
-                </div>
-            </div>
-            <div class="counters mx-6">
-                <h1 class="text-[25px] font-bold text-[34px]">Satisfied Client</h1>
-                <div class="counter text-[25px] font-bold text-[34px]" id="clients-counter">
-                    0%
-                </div>
-            </div>
-            <div class=" counters mx-6">
-                <h1 class="text-[25px] font-bold text-[34px]">Total Clients</h1>
-                <div class="counter text-[25px] font-bold text-[34px]" id="team-counter">
-                    0+
-                </div>
-            </div>
-        </div>
+        </nav>
         
-        <div class="container bg-wite-image font-garamond">
-            <h1>Contact Us</h1>
-            <p>Get in touch and see how our industry expertise can help you achieve your business goals.</p>
-            <form class="contact-form">
-                <div class="form-control">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-control">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-control">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="bg-custom-red">Send</button>
-            </form>
-        </div>
     </div>
+    <div style="height: 100%; color: white;">
+        
+    </div>
+
+    <div class="landing">
+        <h1 class="jump" data-aos="zoom-in"
+        data-aos-duration="900"
+        data-aos-easing="ease-out-quart">CLEAN IMAGE <BR> <div class="words"><div class="line"></div>DIGITAL MAGNETIC </div> INDUCER GENERATOR</h1>
+        
+        <p class="mini">Clean Image Limited Provides Clean, Cost-Effective, Efficient, and Viable Alternative Energy Technology To Markets That Have Limited
+            Access While Simultaenously Creating a Working Sustainable Environmentally Friendly Power Generation For Years To Come </p>
+            <div class="ccas">
+                <a href="#" class="charging-button">SCHEDULE CONSULTATION</a>
+            </div>
+             
+    </div>
+
+    <div class="product">
+        <div class="tit"><h1>OUR RANGE OF PRODUCTS</h1><p>Slide right or left</p></div>
+        
+        <div class="slideshow-container">
+            <div class="relax" id="popp">
+                <div class="slide1" id="col1">
+                    <!-- Content for slide 1 -->
+                    <h2 class="hem">Residential<br> Solutions</h2>
+                    <p class="hemp">Power your home sustainably with our range of residential generators.
+                        Say goodbye to skyrocketing energy bills and hello to energy independence.</p>
+                        <button class="animated-button">SCHEDULE CONSULTATION</button>
+                </div>
+                <div class="slide2" id="col2">
+                  <img src="./images/home.png" class="des">
+                    
+                </div>
+            </div>
     
-    <div class="sub1 bg-contact-image bg-center bg-cover bg-no-repeat bg-fixed">
-        <div class=" sub w-11/12 mx-auto text-white flex flex-col md:flex-row justify-between items-center">
-            <div class="py-8 md:py-16" data-aos="zoom-out"
+            <div class="relax"  data-aos="zoom-in"
             data-aos-duration="900"
             data-aos-easing="ease-out-quart">
-                <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] max-w-[650px] font-garamond text-white leading-none mb-3">Subscribe to our NewsLetters</h1>
-                <p class="max-w-[650px] ">Join us on the journey to a cleaner, more sustainable, and efficient future. Together, we can power the world while preserving it for generations to come.</p>
-            </div>
-            <div class="pb-8 md:py-16">
-                <div class="container font-garamond">
-                    <h1>Subscribe to Our Newsletter</h1>
-                    <form class="subscription-form">
-                        <div class="form-control">
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                            
-                            <button type="submit" class="bg-custom-red my-3">Subscribe</button>
-                        </div>
-                    </form>
+                <div class="slide1" id="col3">
+                    <!-- Content for slide 3 -->
+                    <h2 class="hem">Commercial<br> Solutions</h2>
+                    <p class="hemp">From small businesses to large corporations, 
+                        our commercial generators are tailored to meet your energy needs efficiently and reliably..</p>
+                        <button class="animated-button">SCHEDULE CONSULTATION</button>
+                </div>
+                <div class="slide2" id="col4">
+                    <!-- Content for slide 4 -->
+                    <img src="./images/comercial.png" class="des">
                 </div>
             </div>
-           
-            <!-- <div class="space-y-3">
-                <p>Address: Plot 59 A, Crescent Fynstone Estate Sahara Homes, Gwarinpa, Abuja.</p>
-                <p>Email: info.cleanimage@gmail.com</p>
-                <p>Tel: +2348023108365, +2348078871506</p>
-            </div> -->
-        </div>
-        
-    </div>
-    <div class="container4 font-garamond lg:w-[60%] xl:w-[60%] sm:w-[100%] md:w-[100%] lg:left-[20%] xl:left-[20%] md:left-[0%] sm:left-[0%] ">
-        <h1 class="font-bold">Customer Reviews</h1>
-        <div class="reviews-container">
-            <div class="reviews-wrapper">
-                <div class="review">"I couldn't be happier with my decision to choose Digital Inducer Generators for my power needs. 
-                    Their cutting-edge technology and commitment to sustainability are truly impressive.
-                     The generator I purchased has been running flawlessly, and it's incredibly efficient. The peace of mind it brings
-                      during power outages is priceless. I highly recommend Digital Inducer Generators to anyone in need of a reliable
-                       power solution."<p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
-                    </div>
-                <div class="review">"I recently switched to Digital Inducer Generators for my backup power needs,
-                     and I'm thoroughly impressed. The ease of installation and user-friendly interface make it a standout product. 
-                     The team provided excellent customer support throughout the process, from choosing the right generator to installation and beyond. 
-                    I can't thank them enough for their professionalism and the peace of mind they've brought to my family."
-                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p></div>
-                <div class="review">"I've been using Digital Inducer Generators for several years now, and I'm 
-                    continuously amazed by their reliability and performance. During severe weather events and unexpected power failures,
-                     my generator has never let me down. The remote monitoring and control capabilities are fantastic, allowing me to check on my generator's status from anywhere. 
-                    I highly recommend Digital Inducer Generators to anyone seeking a top-notch power solution."
-                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p></div>
-                <!-- Add more reviews here -->
-            </div>
-            <div class="controls">
-                <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
-                <button class="next-btn" onclick="nextSlide()">&#10095;</button>
-            </div>
-            <div class="slide-indicators">
-                <!-- Slide indicators will be generated using JavaScript -->
+    
+            <div class="relax" data-aos="zoom-in"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <div class="slide1" id="col5">
+                    <!-- Content for slide 5 -->
+                    <h2 class="hem">Industrial<br> Solutions</h2>
+                    <p class="hemp">For heavy-duty applications, our industrial generators are up to the task.
+                        They provide the power you need to keep your operations running smoothly.</p>
+                        <button class="animated-button">SCHEDULE CONSULTATION</button>
+                </div>
+                <div class="slide2" id="col6">
+                    <!-- Content for slide 6 -->
+                    <img src="./images/industry (2).png" class="des">
+                </div>
             </div>
         </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="dot-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
     </div>
-    <footer class="pt-8 md:pt-16 pb-5 bg-black">
-        <div class="w-11/12 mx-auto flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between md:items-start " data-aos="slide-up"
+
+    <div class="important"  data-aos="zoom-in"
+    data-aos-duration="900"
+    data-aos-easing="ease-out-quart">
+        <p class="scroll-text"><span class="change-color"><span class="change-color">We developed a technology</span> <span class="change-color">that will redefine</span>
+            <span class="change-color"> the electrical</span> energy generation <span class="change-color"></span><span class="change-color">sector. 
+            The </span><span class="change-color"></span><span class="change-color">Digital Magnetic Inducer Generator (DMIG)</span><span class="change-color"><span class="change-color">provides access
+             to an inexpensive, continuously</span> <span class="change-color">available,
+             and non-polluting method for </span><span class="change-color">generating electrical</span><span class="change-color">
+                 energy in a</span><span class="change-color"> format that is</span><span class="change-color"></span><span class="change-color"> applicable 
+                 in both small and </span><span class="change-color">
+             large-scale, fixed</span><span class="change-color"> and portable, energy scenarios. </span>
+             <span class="change-color">The DMIG is currently available in </span><span class="change-color">several models 
+            with generation</span> capacities starting<span class="change-color"> at 5MW respectively,</span><span class="change-color">
+                 and is easily customizable</span><span class="change-color"> to larger scales.</span></p>
+    </div>
+    <div class="container" id="kom">
+        <div class="image-container">
+            <img src="./images/diesel.jpg" alt="Growing Image" id="growingImage">
+        </div>
+    </div>
+    <div class="tabz">
+        <div class="busy" data-aos="slide-up"
         data-aos-duration="900"
         data-aos-easing="ease-out-quart">
-            <div>
-                <div>
-                    <img src="./src/images/cim_logo.png" class="w-14 h-14 mb-3.5 alt="">
-                    <p class="text-sm text-white font-medium w-full md:max-w-[350px]">Grow your business with Clean Image Limited. We are one call Away.</p>
+            <h2 class="wite">
+            (01) Environment </h2> <span class="plus-sign">+</span> 
+            
+        </div>
+        <div class="content">
+            <p>Generating zero-emissions, No radiation, No sulphur, No heat, 
+                high-efficiency, and scalable energy solutions through advanced innovations in engineering</p>
+        </div>
+    
+
+        <div class="busy" data-aos="slide-up"
+        data-aos-duration="900"
+        data-aos-easing="ease-out-quart" data-aos-delay="500">
+            <h2 class="wite">
+                (02) Maintenance</h2> <span class="plus-sign">+</span>
+            
+        </div>
+        <div class="content">
+            <p>Routine maintenance ensures efficient power
+                generation with no down-time. Upon purchase, a maintenance contract
+                will be catered specific to your organizational needs.</p>
+        </div>
+    
+
+        <div class="busy" data-aos="slide-up"
+        data-aos-duration="900"
+        data-aos-easing="ease-out-quart" data-aos-delay="1000">
+            <h2 class="wite">
+                (03) Client Support</h2> <span class="plus-sign">+</span>
+            
+        </div>
+        <div class="content">
+            <p>Our customers seek maximum performance and minimum down- time. Therefore, Noca Clean
+                Energy delivers the necessary support to power our customers forward.
+                Troubleshooting and Remote Assistance:
+                Although technical issues are rare, simple technical problems can be fixed by
+                consulting our troubleshooting guide. Alternatively, our trained technicians can provide
+                over the phone service to solve issues that may arise..</p>
+        </div>
+    
+         <div class="busy" data-aos="slide-up"
+         data-aos-duration="900"
+         data-aos-easing="ease-out-quart" data-aos-delay="1500">
+            <h2 class="wite">
+                (04) Field Support and Training Programs</h2> <span class="plus-sign">+</span>
+            
+        </div>
+        <div class="content">
+            <p>We offer an
+                extensive training program and educational seminars to a
+                local team so that they can provide maintenance and repairs on our technologies when needed.</p>
+        </div>
+    </div>
+    <div class="choose">
+        <div class="title"><h1>WHY CHOOSE US?</h1></div>
+        <div class="whys">
+            <div class="why1" id="blue1" data-aos="zoom-in"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <div class="round-icon">
+                    <i class="fa-solid fa-people-group ico"></i> <!-- You can change the icon class here -->
                 </div>
+                <h1 class="hada">Our Expertise</h1>
+                <p class="para">Our team of experts has spent years perfecting the art of magnetic induction technology.
+                    We're passionate about what we do and dedicated to delivering the best possible solutions</p>
             </div>
-            <div class="w-fit mx-auto md:mx-0 text-white space-y-3 font-medium"> 
-                <p class="font-semibold mx-auto mt-3 md:mt-0 md:mx-0 text-center md:text-left">Quick Links</p>
-                <div class="flex flex-col items-center md:items-start gap-2 text-sm mx-auto md:mx-0 text-center md:text-left"> 
-                    <a href="index.html" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Home</p> </a>
-                    <a href="services.html" class="w-fit h-fit"><p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Our Services</p></a>
-                    <a href="contact.html" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Contact Us</p></a>
-                    <a href="index.html" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Fan Zone</p></a>
-                    <a href="index.html" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Sports Creative</p></a>
-                </div>  
-                <div class="flex flex-row gap-3">
-                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-4" src='./src/images/facebookicon.png' alt='socials'/></div>
-                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-4" src='./src/images/twittericon.png' alt='socials'/></div>
-                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-5" class='smallericon' src='./src/images/linkedinicon.png' alt='socials'/></div>
-                </div>              
+            <div class="why1" id="blue2" data-aos="zoom-in"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart" data-aos-delay="500">
+                <div class="round-icon">
+                    <i class="fa-solid fa-thumbs-up ico"></i> <!-- You can change the icon class here -->
+                </div>
+                <h1 class="hada">Customer Centric</h1>
+                <p class="para">Your satisfaction is our top priority.
+             We work closely with you to understand your unique energy requirements and provide tailored solutions.</p>
+            </div>
+            <div class="why1" id="blue3"data-aos="zoom-in"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart" data-aos-delay="1000">
+                <div class="round-icon">
+                    <i class="fa-solid fa-smog ico"></i> <!-- You can change the icon class here -->
+                </div>
+                <h1 class="hada">Environmental Stewardship</h1>
+                <p class="para">We are committed to protecting the planet. 
+                    Our eco-friendly technology reflects our dedication to a greener, more sustainable future.</p>
             </div>
         </div>
-        <div class="w-11/12 mx-auto text-white pt-5">
-            <p class="mx-auto w-fit text-sm">© 2023 Clean Image Limited. All rights reserved.</p>
+        <div class="countme">
+            <div class="counter" data-aos="zoom-in"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+            <i class="fa-solid fa-file-circle-check ico"></i><p>Project Done</p><p> <span id="projectCounter">0</span><span class="plus">+</span></p>
+            </div>
+            <div class="counter" data-aos="zoom-in"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+            <i class="fa-solid fa-user-check ico"></i><p>Satisfied Clients</p><p> <span id="satisfiedClientsCounter">0</span><span class="plus">%</span></p>
+            </div>
+            <div class="counter" data-aos="zoom-in"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+            <i class="fa-solid fa-users ico"></i><p> Total Clients</p><p> <span id="totalClientsCounter">0</span><span class="plus">+</span></p>
+            </div>
         </div>
-    </footer>
-    <!-- We partner with you to continually evolve and optimize to reflect the changing needs of your business. -->
-    
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
-  <script>jQuery.noConflict(true);</script>
-  <script src="./src/script.js"></script>
-  <script>
-    $('.owl-carousel').owlCarousel({
-        items : 1,
-        mouseDrag: true,
-        touchDrag: true,
-        
-        autoHeight: true,
-        
-        animateOut: false,
-        animateIn: false,
-        autoplayHoverPause:false,
-        stopOnHover:false,
-        
-        lazyLoad : false,
-        loop: true,
-        
-        autoplay : true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true,
-        autoplaySpeed: 500,
-        
-        nav : false,
-        navSpeed : 500,
-        navText: [ '', '' ],
-        
-        dots: false,
-        dotsSpeed : 500,
-        
-        responsiveClass: true,
-        responsive:{
-        0:{
-            nav:false
-        },
-        450:{
-            nav : false
-        },
-        
+
+    </div>
+    <div class="container1">
+        <footer class="footer">
+            <div class="logo">
+                <!--<img src="your-logo.png" alt="Company Logo">-->
+                <h2>Logo</h2>
+            </div>
+            <div class="tabs">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="subscription">
+                <input type="email" placeholder="Enter your email">
+                <button class="subscribe-button">Subscribe</button>
+            </div>
+        </footer>
+    </div>
+    <script src="./script/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true });
+    </script>
+    <script>
+        function animateCounterOnScroll(targetId, start, end, duration) {
+    let hasAnimated = false;
+
+    function animateCounter() {
+        const target = document.getElementById(targetId);
+        const range = end - start;
+        const increment = Math.ceil(range / (duration / 50));
+        let current = start;
+
+        const updateCounter = () => {
+            current += increment;
+            if (current >= end) {
+                current = end;
+                clearInterval(counterInterval);
+            }
+            target.textContent = current.toLocaleString();
+        };
+
+        const counterInterval = setInterval(updateCounter, 50);
     }
-    })
-    var owl = $('.owl-carousel');
-    owl.owlCarousel();
-    $('.customNextBtn').click(function() {
-        owl.trigger('next.owl.carousel');
-    })
-    // Go to the previous item
-    $('.customPrevBtn').click(function() {
-        owl.trigger('prev.owl.carousel');
-    })
-    owl.on('changed.owl.carousel', function(property) {
-        var currentIndex = property.item.index - 1;
-        var count = property.item.count;
-        if (currentIndex > count) {
-            currentIndex -= count;
-        }
-        if (currentIndex <= 0) {
-            currentIndex += count;
-        }
-        $('#currentSlide').text(currentIndex);
-    })
-    // $( ".arrow-icon" ).click(function() {
-    //     $(this).toggleClass("open");
-    // });
-    $( ".service_container" ).click(function() {
-        $(this).toggleClass("open");
-    });
-  </script>
-  
-  <script> 
-    // Look for .hamburger and sidebar7
-    let toggled = false;
-    var hamburger = document.querySelector(".hamburger");
-    var sideBar = document.querySelector(".sideBar");
-    // On click
-    hamburger.addEventListener("click", function() {
-      // Toggle class "is-active"
-      hamburger.classList.toggle("is-active");
-      hamburger.classList.toggle("fixed");
 
-      hamburger.classList.toggle("right-[4.2%]");
-      hamburger.classList.toggle("top-6");
-      sideBar.classList.toggle("hidden");
-      // Do something else, like open/close menu
-      if (toggled){
-        // sideBar.classList.toggle("hidden");
-        sideBar.classList.toggle("in-circle-swoop");
-      }else{
-        // sideBar.classList.toggle("hidden");
-        sideBar.classList.toggle("out-circle-swoop");
-      }
-    //   document.body.classList.toggle('lock-scroll');
-    });
-    
-    window.addEventListener("load", function(){
-        $(".preloader_bg").fadeToggle();
-        // $("#bg_video")[0].pause();
-        $("#bg_video")[0].play();
-        const videoElement = document.getElementById('bg_video');
+    const targetElement = document.getElementById(targetId);
 
-        videoElement.addEventListener('suspend', () => {
-            videoElement.play();
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2 // Adjust this threshold as needed
+    };
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                animateCounter();
+                observer.unobserve(targetElement); // Stop observing once the counter is visible and animated
+                hasAnimated = true;
+            }
         });
-        // $("#bg_video")[0].addEventListener('play', () => {
-        //     // $("#bg_video")[0].play();
-        //     console.log("Playing")
-        // });
-        
-        if (videoElement.playing) {
-            // video is already playing so do nothing
-        }
-        else {
-            // video is not playing
-            // so play video now
-            videoElement.play();
-        }
-    })
+    }, options);
 
+    observer.observe(targetElement);
+}
 
+// Set your target numbers here
+const projectTarget = 50;
+const satisfiedClientsTarget = 100;
+const totalClientsTarget = 200;
 
-  </script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true });
-  </script>
+// Animate the counters on scroll
+animateCounterOnScroll("projectCounter", 0, projectTarget, 2000);
+animateCounterOnScroll("satisfiedClientsCounter", 0, satisfiedClientsTarget, 2000);
+animateCounterOnScroll("totalClientsCounter", 0, totalClientsTarget, 2000);
+
+    </script>
 </body>
 </html>

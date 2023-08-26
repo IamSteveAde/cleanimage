@@ -1,0 +1,299 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: black;
+    overflow-x: hidden;
+    
+}
+
+/* Style the navigation button */
+.nav-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.navs{
+    text-align: center;
+   
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+.nav-button:hover {
+    color: rgb(64, 64, 214); /* Change color on hover */
+    transform: scale(1.1); /* Add a slight scale effect on hover */
+}
+/* Style the hamburger bars */
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: background-color 0.3s ease;
+}
+nav {
+     /* Fixed position to cover full screen */
+    top: 0;
+    left: -100%; /* Initially off-screen to the left */
+    height: 100%;
+    width: 100%; /* Full width */
+    background-color: black;
+    
+   
+
+    font-family: 'Playfair Display', serif;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Add a box shadow */
+    z-index: 999; /* Ensure the navigation is on top */
+    text-align: left;
+    padding-left: 10px;
+    
+}
+/* Add animation class for slide-in effect */
+nav.slide-in {
+    animation: slideInAnimation 0.5s ease-in-out;
+}
+.tope{
+    width: 100%;
+    top: 20px;
+    position: relative;
+    display: flex;
+}
+.logo{
+    position: relative;
+    
+    left: 35px;
+}
+.cca{
+    position: relative;
+    
+    left: 85%;
+   
+}
+.cca {
+    text-align: center;
+}
+
+.charging-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:  black;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.charging-button:hover {
+    background-color: rgba(0, 0, 255, 0.501);
+}
+
+.charging-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #3498db, transparent);
+    animation: charge 2s linear infinite;
+}
+
+@keyframes charge {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+/* Define the slide-in animation */
+@keyframes slideInAnimation {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+/* Style the navigation links */
+nav ul {
+    list-style: none;
+    padding: 20px;
+}
+nav.active li {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+nav li {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    padding-bottom: 10px;
+    font-weight: 500px;
+    font-size: 70px;
+    border-bottom: solid 1px white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white    ;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color:  rgb(64, 64, 214); /* Change color on hover */
+}
+
+/* Style the close icon */
+.close-icon {
+    font-size: 28px;
+    line-height: 1;
+}
+/* Initially hide the close icon */
+.hidden {
+    display: none;
+}
+/* Initially hide the navigation */
+.hidden {
+    display: none;
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.footer .logo img {
+    max-width: 100px;
+}
+
+.footer .tabs ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+}
+
+.footer .tabs li {
+    margin-right: 20px;
+}
+
+.footer .tabs a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer .tabs a:hover {
+    color: #ffcc00;
+}
+.subscription{
+    display: grid;
+}
+.footer .subscription input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.footer .subscription .subscribe-button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s;
+}
+
+.footer .subscription .subscribe-button:hover {
+    background-color: #333;
+    color: #ffcc00;
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    nav {
+      padding-left: 2px;
+    }
+    button{
+        text-align: center;
+        position: relative;
+        left: 30%;
+    }
+    
+    .cca a{
+        font-size: 15px;
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+
+    /* Show the navigation when button is clicked */
+    #nav-toggle.active + nav {
+        display: block;
+    }
+
+    /* Hide the hamburger bars when navigation is active */
+    #nav-toggle.active .bar {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .cca{
+        left: 60%;
+        font-size: 15px;
+    }
+    #nav-toggle {
+        display: block;
+        position: relative;
+        left: 40%;
+    }
+
+
+}
+
+/* Styles for tablet screens (between 769px and 1024px width) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}

@@ -1,0 +1,600 @@
+#loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black,rgb(0, 0, 0));
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 9999;
+}
+
+#loader {
+    width: 100px;
+    height: 100px;
+    border: 8px solid #3498db;
+    border-top: 8px solid #fff;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+#loader-text {
+    font-size: 44px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    text-align: center;
+    padding-left: 20PX;
+}
+
+#loader-container.loading {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.landing{
+    color: white;
+    font-size: 40px;
+    position: relative;
+    left: 18%;
+    padding-top: 60px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+.jump{
+    animation: ascend 3s ease-in-out infinite;
+}
+.line{
+    width: 90px;
+    height: 10px;
+    background-color: white;
+    position: relative;
+    margin-top: 40px;
+}
+.words{
+    display: flex;
+}
+@keyframes ascend {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+.mini{
+    font-size: 20px;
+    width: 30%;
+    text-align: center;
+    position: relative;
+    left: 15%;
+    margin-bottom: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.ccas{
+    position: relative;
+    left: 21%;
+}
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%; /* Equal width for each slide */
+    padding: 20px;
+    text-align: center;
+    background-color: #3498db;
+    color: white;
+}
+.relax{
+    display: flex;
+}
+.slide1{
+    width: 50%;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+}
+.slide2{
+    width: 50%;
+}
+#col1{
+    background-color: rgb(87, 131, 252);
+}
+#col2{
+    background-color: rgba(44, 44, 101, 0.853);
+}
+#col3{
+    background-color: rgb(209, 57, 120);
+}
+#col4{
+    background-color: rgb(155, 37, 100);
+}
+#col5{
+    background-color:  rgb(28, 153, 192);
+}
+#col6{
+    background-color: rgb(19, 112, 140);
+}
+.hem{
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.hemp{
+    font-size: 25px;
+    padding-top: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+}
+.slideshow-pair{
+    transition: transform 0.5s ease-in-out;
+}
+.product{
+    margin-top: 100px;
+}
+.animated-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.slideshow-container {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.relax {
+    flex: 0 0 100%;
+}
+
+.relax.active {
+    transform: translateX(-100%);
+}
+
+.animated-button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3498db, #e74c3c);
+    top: 0;
+    left: -100%;
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.animated-button:hover::before {
+    left: 0;
+}
+
+.animated-button:hover {
+    color: #3498db;
+}
+.prev{
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    z-index: 1;
+    top: 70rem;
+}
+.next{
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    top: 70rem;
+    right: 20px;
+}
+.dot{
+    width: 50px;
+}
+.des{
+    width: 50%;
+    position: relative;
+    left: 180px;
+    top: -30px;
+}
+.tit{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.tit p{
+    font-size: 20px;
+    padding-top: 10px;
+}
+.important{
+    width: 60%;
+    text-align: left;
+    position: relative;
+    left: 25%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.scroll-text {
+    font-size: 35px;
+    
+    
+}
+.change-color {
+    color: black; /* Initial color is black */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.content {
+    padding: 20px;
+}
+
+.white-text {
+    color: white !important; /* Change text color to white */
+}
+
+.text-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-text {
+    font-size: 44px;
+}
+
+.scroll-text span {
+    color: black;
+    transition: color 1s ease;
+    opacity: 1;
+    transform: translateY(0);
+    display: inline-block;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 150px;
+}
+
+.image-container {
+    width: 60%;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    overflow: hidden;
+    
+}
+
+#growingImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.5); /* Initial scale */
+    transition: transform 0.5s;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+}
+.wite{
+    color: white;
+    width: 70%;
+}
+.busy{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+/* Style for the plus sign */
+.plus-sign {
+    cursor: pointer;
+    position: relative;
+    font-size: 50px;
+    width: 20%;
+    color: white;
+    
+}
+.tabz{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    position: relative;
+    left: 10%;
+    margin-bottom: 50px;
+}
+.content{
+    width: 70%;
+    padding-bottom: 40px;
+}
+
+/* Style for the content initially hidden */
+.content {
+    display: none;
+    color: white;
+}
+
+.choose{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.829);
+    color: rgb(60, 60, 105);;
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.round-icon {
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    border: solid rgb(60, 60, 105);
+    border-radius: 50%; /* Makes the div round */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: #fff;
+    position: relative;
+    left: 140px;
+}
+.ico{
+    color: rgb(60, 60, 105);;
+}
+.why1{
+    width: 30%;
+    text-align: center;
+}
+.para{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.hada{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.whys{
+    display: flex;
+    padding-left: 5%;
+    gap: 20px;
+    padding-bottom: 100px;
+}
+.countme{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+.counter {
+    display: inline-block;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 10px;
+    opacity: 0; /* Initially hide the counters */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 50px;
+    
+}
+
+.counter span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.counter:hover{
+    cursor: pointer;
+    transform: scale(1.7);
+}
+
+.plus {
+    font-size: 24px;
+    vertical-align: super;
+}
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+    .landing {
+        font-size: 30px; /* Adjust the font size for tablets */
+        text-align: center; /* Center align the text on tablets */
+        padding-top: 160px; /* Adjust padding as needed */
+        left: 4px;
+    }
+    .mini{
+        width: 90%;
+        left: 9px;
+    }
+    .ccas{
+        left: -10px;
+    }
+    
+    .relax{
+        display: grid;
+    }
+}
+
+/* Media Query for Phones */
+@media (max-width: 480px) {
+    .landing {
+        font-size: 12px; /* Adjust the font size for phones */
+        left: 2px;
+        text-align: center; /* Center align the text on phones */
+        padding-top: 160px; /* Adjust padding as needed */
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    .relax{
+        display: grid;
+    }
+   
+    .line{
+        width: 90px;
+        height: 10px;
+        background-color: white;
+        position: relative;
+        left: 70px;
+        margin-top: 14px;
+    }
+    .mini{
+        width: 90%;
+        left: 14px;
+        font-size: 15px;
+        text-align: left;
+        margin-top: 30px;
+    }
+    .ccas{
+        left: -50px;
+    }
+}
+@media (max-width: 768px) {
+    .relax{
+        display: grid;
+    }
+    .landing {
+        font-size: 18px; /* Adjust the font size for phones */
+        left: 2px;
+        text-align: center; /* Center align the text on phones */
+        padding-top: 160px; /* Adjust padding as needed */
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    .relax{
+        display: grid;
+    }
+   
+    .line{
+        width: 90px;
+        height: 10px;
+        background-color: white;
+        position: relative;
+        left: 90px;
+        margin-top: 17px;
+    }
+    .mini{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 15px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .ccas{
+        left: 10%;
+    }
+    
+    .slide1 {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+
+    .slide2 {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+    .des{
+        left: 20%;
+    }
+    .animated-button{
+        left: 5px;
+    }
+    .prev{
+        left: 5px;
+        top: 86rem;
+    }
+    .next{
+        top: 86rem;
+        left: 430px;
+    }
+    .important{
+        width: 100%;
+        font-size: 18px;
+        left: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .scroll-text{
+        font-size: 25px;
+    }
+    .tabz{
+        font-size: 20px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 170px;
+    }
+    #kom{
+        height: 50vh;
+    }
+    .whys{
+        display: grid;
+    }
+    .why1{
+        width: 100%;
+        margin-top: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .round-icon{
+        left: 35%;
+    }
+    .countme{
+        display: grid;
+        text-align: center;
+    
+    }
+    .counter{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+  
+}
+
+/* Styles for tablet screens (between 769px and 1024px width) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .slide1 {
+        width: 50%;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 30px;
+        padding-top: 80px;
+    }
+
+    .slide2 {
+        width: 50%;
+    }
+    .relax{
+        display: grid;
+    }
+}
