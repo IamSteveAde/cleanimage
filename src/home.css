@@ -453,6 +453,16 @@
     .relax{
         display: grid;
     }
+    .tit{
+        width: 100%;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 160px;
+    }
+    .tit h1{
+        font-size: 25px;
+    }
    
     .line{
         width: 90px;
@@ -472,6 +482,7 @@
     .ccas{
         left: -50px;
     }
+    
 }
 @media (max-width: 768px) {
     .relax{
@@ -494,7 +505,7 @@
         height: 10px;
         background-color: white;
         position: relative;
-        left: 90px;
+        left: 64px;
         margin-top: 17px;
     }
     .mini{
@@ -531,13 +542,17 @@
         left: 5px;
     }
     .prev{
-        left: 5px;
-        top: 86rem;
+        left: 1px;
+        top: 91rem;
     }
     .next{
-        top: 86rem;
-        left: 430px;
+        top: 91rem;
+        left: 326px;
     }
+    .title{
+        font-size: 22px;
+    }
+       
     .important{
         width: 100%;
         font-size: 18px;
@@ -567,16 +582,36 @@
         padding-right: 20px;
     }
     .round-icon{
-        left: 35%;
+        left: 85px;
     }
     .countme{
         display: grid;
         text-align: center;
+        width: 100%;
+       
     
     }
     .counter{
         padding-top: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
         padding-bottom: 20px;
+        font-size: 25px;
+    }
+    .busy{
+        font-size: 17px;
+    }
+    .plus-sign{
+        font-size: 30px;
+        position: relative;
+        left: 30px;
+        
+    }
+    #kom{
+        width: 100%;
+    }
+    #kom img{
+        width:100%;
     }
   
 }
