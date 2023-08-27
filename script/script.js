@@ -116,23 +116,29 @@ plusSigns.forEach((plusSign, index) => {
     });
 });
 // Simulate loading progress from 0 to 100%
-function simulateLoading() {
-    const loaderContainer = document.getElementById("loader-container");
-    let progress = 0;
-    const interval = setInterval(() => {
-        progress += 1;
-        if (progress >= 100) {
-            clearInterval(interval);
-            // Hide loader when loading is complete
-            loaderContainer.classList.remove("loading");
-            setTimeout(() => {
-                loaderContainer.style.display = "none";
-            }, 500); // Delay hiding for smoother transition
-        }
-    }, 30);
-}
+
 
 // Call the loading function when the page loads
 window.addEventListener("load", () => {
     simulateLoading();
 });
+const loaderText = document.querySelectorAll('.loader-text span');
+const loader = document.querySelector('.loader');
+
+let currentIndex = 0;
+
+function changeText() {
+    loaderText[currentIndex].style.opacity = '0'; // Hide the current text
+    currentIndex = (currentIndex + 1) % loaderText.length; // Move to the next text
+    loaderText[currentIndex].style.opacity = '1'; // Show the next text
+}
+
+// Change text every 2 seconds (adjust the interval as needed)
+const textChangeInterval = setInterval(changeText, 2000);
+
+// After 8 seconds, remove the loader and clear the interval
+setTimeout(() => {
+    clearInterval(textChangeInterval); // Stop text changing
+    loader.style.display = 'none'; // Hide the loader
+    document.body.style.overflow = 'auto'; // Enable scrolling
+}, 8000); // Adjust the delay as needed
