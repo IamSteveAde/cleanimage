@@ -118,30 +118,7 @@ plusSigns.forEach((plusSign, index) => {
 // Simulate loading progress from 0 to 100%
 
 
-// Call the loading function when the page loads
-window.addEventListener("load", () => {
-    simulateLoading();
-});
-const loaderText = document.querySelectorAll('.loader-text span');
-const loader = document.querySelector('.loader');
-
-let currentIndex = 0;
-
-function changeText() {
-    loaderText[currentIndex].style.opacity = '0'; // Hide the current text
-    currentIndex = (currentIndex + 1) % loaderText.length; // Move to the next text
-    loaderText[currentIndex].style.opacity = '1'; // Show the next text
-}
-
-// Change text every 2 seconds (adjust the interval as needed)
-const textChangeInterval = setInterval(changeText, 2000);
-
-// After 8 seconds, remove the loader and clear the interval
-setTimeout(() => {
-    clearInterval(textChangeInterval); // Stop text changing
-    loader.style.display = 'none'; // Hide the loader
-    document.body.style.overflow = 'auto'; // Enable scrolling
-}, 8000); // Adjust the delay as needed
+ // Adjust the delay as needed
 const reviewSlides = document.querySelectorAll('.review-slide');
 let currentSlide = 0;
 
@@ -200,3 +177,34 @@ const SubmitContactForm = (e) =>{
     .catch(error => (console.log(error), correct_response_indicator.style.display="none", error_response_indicator.style.display="block"));
     contact_us_form.reset();
 }
+
+// Phrases to display in the loader
+const phrases = ["CLEAN", "IMAGE", "LIMITED"];
+const loadingText = document.getElementById("loading-text");
+let currentIndex = 0;
+
+// Function to update the loading text with the next phrase
+function updateLoadingText() {
+    loadingText.textContent = phrases[currentIndex];
+    currentIndex = (currentIndex + 1) % phrases.length;
+}
+
+// Simulate page loading
+function simulatePageLoad() {
+    setTimeout(() => {
+        // Replace this with your actual page load logic
+        // For demonstration, we'll hide the loader after 3 seconds
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    }, 3000); // 3 seconds
+}
+
+// Start the loader animation
+function startLoader() {
+    setInterval(updateLoadingText, 1000); // Change text every second
+    simulatePageLoad();
+}
+
+// Initialize the loader
+window.onload = startLoader;
+
