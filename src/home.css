@@ -1,3 +1,7 @@
+html,body{
+    overflow-x: hidden;
+}
+
 .loader {
     position: fixed;
     top: 0;
@@ -11,6 +15,106 @@
     justify-content: center;
     align-items: center;
     z-index: 9999; /* Ensure it's on top of other elements */
+}
+.review-container {
+    width: 35%;
+   
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding-top: 30px;
+}
+.bisq{
+    left: 45%;
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: -10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.contact-form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadein 1s;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+}
+
+.success-message {
+    color: green;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.review-slide {
+    width: 100%;
+    padding: 20px;
+    background-color: #f2f2f2;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(255, 255, 255, 0.295);
+}
+
+.review-slide h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.review-slide p {
+    margin: 10px 0;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 .loader-text {
@@ -91,6 +195,26 @@
 .ccas{
     position: relative;
     left: 21%;
+}
+.slider-container {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    width: max-content;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review {
+    min-width: 300px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-right: 10px;
 }
 .slider-container {
     width: 100%;
@@ -495,6 +619,22 @@
         width: 90%;
         margin-bottom: 50px;
     }
+    .foottitle{
+        font-size: 19px;
+    }
+    .review-container{
+        width: 70%;
+    }
+    .bisq{
+        position: relative;
+        left: -1%;
+        margin-top: 4px;
+    }
+    .form_container{
+        position: relative;
+        margin-left: -100px;
+        width: 100%;
+    }
     .relax{
         display: grid;
     }
@@ -647,5 +787,392 @@
     }
     .relax{
         display: grid;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 15px 30px;
+
+}
+a{
+    text-decoration: none;
+}
+.contact{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    /* background-color: #; */
+    
+}
+.contactle{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.contact_intro_container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    background-position-y: center;
+    background-position-x: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.contact_intro_container .contact_intro_container_inner{
+    width: 90%;
+    margin-top: 150px;
+}
+.contact_intro_container .contact_intro_container_inner h1{
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    font-size: 52px;
+    width: 370px;
+    line-height: 1.2em;
+    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
+}
+.contact_intro_container .contact_intro_container_inner .contact_intro_text{
+    color: #fff;
+    width: 700px;
+    font-size: 16px;
+    border-left: 5px solid #EF1514;
+    padding-left: 10px;
+    margin: 20px 0 30px;
+    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
+    font-weight: 500;
+    box-sizing: border-box;
+}
+.contact_intro_container .contact_intro_container_inner .contact_intro_button_container{
+    width: fit-content;
+}
+.contact_intro_container .contact_intro_container_inner .button{
+    display: flex;
+    align-items: center;
+    background-color: #EF1514;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-weight: 600;
+    text-transform: capitalize;
+    
+}
+.contact_intro_container .contact_intro_container_inner .button:hover{
+    background-color: #ad0f0f;
+}
+.contact_intro_container .contact_intro_container_inner .rightarrowIcon{
+    width: 25px;
+    height: 20px;
+}
+
+.contact_container{
+    width: 90%;
+    padding: 50px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+.address_container, .form_container{
+    width: 50%;
+}
+.form_container{
+    padding-top: 5px;
+    background-color: transparent;
+}
+.address_container{
+    box-sizing: border-box;
+    padding-right: 35px;
+}
+.address_container h1{
+    margin: 0px;
+    font-weight: 700;
+}
+.address_container h2{
+    margin-top: 10px;
+    color: #EF1514;
+    font-weight: 700;
+}
+.email_container, .location_container, .phone_container, .social_container{
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    width: fit-content;
+}
+.email_container a, .location_container a, .phone_container a{
+    margin-top: 0px;
+    color: white;
+}
+.email_container p, .location_container p, .phone_container p, .social_container p{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 5px 0;
+}
+.email_container:hover a, .location_container:hover a, .phone_container:hover a{
+    color: white;
+}
+.email_container i{
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.location_container i, .phone_container i, .social_container i{
+    font-size: 24px;
+}
+.location_container{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.address_container div{
+    display: flex;
+    align-items: flex-start;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.address_container div img{
+    margin-right: 10px;
+    width: 20px;
+}
+.form_container{
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    padding-top: 100px;
+    left: 25%;
+    margin-bottom: 40px;
+}
+.input_container{
+    display: flex;
+    justify-content: space-between;
+}
+.input_container:first-of-type{
+    padding-top: 10px;
+}
+.user_box {
+    position: relative;
+    width: 47%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+input:-webkit-autofill, 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill, 
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus{
+  transition: background-color 5000s;
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-family: poppins !important;
+  font-size: inherit;
+  cursor: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.user_box input, .other_container textarea {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    /* border-bottom: 1px solid #2f3239; */
+    background: transparent;
+}
+.user_box input:hover, .other_container textarea:hover{
+    background-color: transparent;
+}
+.user_box input:focus, .other_container textarea:focus{
+    background-color: transparent;
+}
+.other_container textarea{
+    height: 35px;
+}
+.user_box label {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    padding: 10px 5px;
+    font-size: 16px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    pointer-events: none;
+    transition: .5s;
+}
+.other_container{
+    width: 100%;
+    position: relative;
+}
+.user_box input:focus ~ label, .user_box input:valid ~ label,
+.user_box textarea:focus ~ label, .user_box textarea:valid ~ label {
+    top: -25px!important;
+    left: 0;
+    color: white;
+    font-size: 12px;
+    border-radius: 0;
+}
+#firstname_inputfield, #lastname_inputfield, #email_inputfield, #tel_inputfield,
+#subject_inputfield, #message_textarea{
+    border: 0px;
+    outline: 0px;
+    border-radius: 0%;
+    border-bottom: 1px solid white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input[type=submit]{
+    width: 100%;
+    padding: 15px 0px !important;
+    text-align: center;
+    font-size: 14px;
+    background-color: rgba(0, 0, 255, 0.695);
+    color: #fff;
+    border: none;
+
+    outline: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+input[type=submit]:hover{
+    background-color: black;
+}
+#correct_response, #error_response{
+    text-align: center;
+    margin-bottom: 0px;
+    display: none;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .intro_container .intro_container_inner{
+        margin-top: 100px;
+    }
+    .contact_intro_container .contact_intro_container_inner{
+        margin-top: 0px;
+    }
+    .contact{
+        min-height: 100%;
+    }
+    .contact_intro_container .contact_intro_container_inner h1{
+        font-size: 46px;
+        width: 320px;
+    }
+    .contact_intro_container .contact_intro_container_inner .contact_intro_text{
+        font-size: 14px;
+        width: 480px;
+    }
+    .address_container, .form_container{
+        width: 100%;
+    }
+    .contact_container{
+        padding: 30px 0 50px;
+    }
+    .address_container{
+        padding-right: 0px;
+    }
+    .address_container p{
+        font-size: 16px;
+    }
+    .user_box{
+        margin-bottom: 5px;
+        /* width: 4%; */
+       box-sizing: border-box;
+    }
+    .user_box input, .other_container textarea{
+        margin-bottom: 15px;
+        font-size: 16px;
+        /* overflow: hidden; */
+    }
+    #send_message_button{
+        padding: 15px 0px !important;
+        height: 51px;
+        box-sizing: border-box;
+    }
+    .user_box label{
+        font-size: 16px;
+    }
+    input[type=button]{
+        margin-top: 10px;
+    }
+    .other_container{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .contact h1{
+        font-size: 24px;
+    }
+    .contact h2{
+        font-size: 18px;
+    }
+    .contact_intro_container{
+        height: 90vh;
+        
+        background-position-y: center;
+        background-position-x: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-size: cover;
+        background-repeat: no-repeat;
+        position: relative; */
+        
+        box-sizing: border-box;
+    }
+    .intro_container .intro_container_inner{
+        margin-top: 0px;
+    }
+    .contact_intro_container .contact_intro_container_inner h1{
+        font-size: 34px;
+        width: 100%;
+    }
+    .contact_intro_container .contact_intro_container_inner .contact_intro_text{
+        width: 100%;
+        font-size: 14px;
+    }
+    .contact_intro_container .contact_intro_container_inner .button{
+        font-size: 14px;
+    }
+    .carousel img{
+        width: 85%;
+        margin: 0 auto;
+    }
+    .address_container, .form_container{
+        width: 100%;
+    }
+    .form_container{
+        padding-top: 10px;
+    }
+    .address_container{
+        padding-right: 0;
     }
 }

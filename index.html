@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/main.css">
     <link rel="stylesheet" href="./src/home.css">
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://kit.fontawesome.com/fbef12b2c8.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -61,8 +89,7 @@
         data-aos-duration="900"
         data-aos-easing="ease-out-quart">CLEAN IMAGE <BR> <div class="words"><div class="line"></div>DIGITAL MAGNETIC </div> INDUCER GENERATOR</h1>
         
-        <p class="mini">Clean Image Limited Provides Clean, Cost-Effective, Efficient, and Viable Alternative Energy Technology To Markets That Have Limited
-            Access While Simultaenously Creating a Working Sustainable Environmentally Friendly Power Generation For Years To Come </p>
+        <p class="mini">Clean Image Limited Provides Clean, Cost-Effective, Efficient, and Viable Alternative Energy Technology  </p>
             <div class="ccas">
                 <a href="#" class="charging-button">SCHEDULE CONSULTATION</a>
             </div>
@@ -266,25 +293,149 @@
         </div>
 
     </div>
+    
+    </div>
+    
+    <div class="review-container">
+        <div class="contactle"><h1>Customer Reviews</h1></div>
+        <div class="review-slide generator">
+
+            <h2>John Smith</h2>
+            <p>I recently purchased the Digital Magnetic Generator, and I must say I am extremely
+                 impressed with its performance and capabilities.</p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <div class="review-slide const">
+            <h2>Daniel Tobi</h2>
+            <p>The Digital Magnetic Generator harnesses the power of magnets to generate electricity efficiently.</p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <div class="review-slide generator">
+            <h2>Stephen Tosin</h2>
+            <p> I appreciate that the generator requires minimal maintenance. Once installed,
+                 it operates quietly and without any significant wear and tear. This translates to cost savings and peace of mind.</p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <div class="review-slide const">
+            <h2>Mercy Tobi</h2>
+            <p>The digital control panel is intuitive and easy to use. It provides real-time data on power output, magnet status, and system health,
+                 allowing me to monitor the generator's performance effortlessly.</p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+    </div>
+    <div class="bisq">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+    
+    <div class="form_container">
+        
+        <form
+          data-aos="slide-up"
+          data-aos-duration="900"
+          data-aos-easing="ease-out-quart"
+          id="homeContactForm"
+          onsubmit="SubmitContactForm(event)"
+        >
+        <div class="contactle"><h1>Contact Us</h1></div>
+        
+          <div class="input_container">
+            <div class="user_box">
+              <input type="text" id="firstname_inputfield" name="First&nbsp;Name" required />
+              <label>First Name</label>
+            </div>
+            <div class="user_box">
+              <input type="text" id="lastname_inputfield" name="Last&nbsp;Name" required />
+              <label>Last Name</label>
+            </div>
+          </div>
+          <div class="input_container">
+            <div class="user_box">
+              <input type="email" id="email_inputfield" name="Email" required />
+              <label>Email</label>
+            </div>
+            <div class="user_box">
+              <input type="tel" id="tel_inputfield" name="Phone&nbsp;Number" required />
+              <label>Phone Number</label>
+            </div>
+          </div>
+          <div class="user_box other_container">
+            <input type="text" id="subject_inputfield" name="Subject" required />
+            <label>Subject</label>
+          </div>
+          <div class="user_box other_container">
+            <textarea
+              required
+              name="Questions/Comments"
+              id="message_textarea"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <label>Message</label>
+          </div>
+          <input
+            type="submit"
+            id="send_message_button"
+            value="Send Message"
+          />
+        </form>
+        <div 
+          data-aos="zoom-out"
+          data-aos-duration="900"
+          data-aos-easing="ease-out-quart">
+        <p id="correct_response">
+          Thank you for contacting us, your message has been sent.
+        </p>
+        <p id="error_response">
+          Error! Your message has not been sent. Please Try again!.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <div class="container1">
         <footer class="footer">
+            <div class="foottitle"><h1>Subscribe to our newsletters</h1></div>
             <div class="logo">
                 <!--<img src="your-logo.png" alt="Company Logo">-->
-                <h2>Logo</h2>
+                
+            </div>
+            <div class="subscribeus">
+                <div class="bribe"><input type="email" placeholder="Enter your email" class="idan"></div>
+                <div class="broom"><button class="buttus">Subscribe</button></div>
             </div>
             <div class="tabs">
+                
                 <ul>
+                    <li>Quick Links</li>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
+                <ul>
+                    <li>Company</li>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Become a Retailer</a></li>
+                    
+                </ul>
+                <ul>
+                    <li>Support</li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Quakity Assurance</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <ul>
+                    <li>Connect</li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Hello@cleanimage.com</a></li>
+                    <li><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-linkedin"></i></li>
+                    
+                </ul>
             </div>
-            <div class="subscription">
-                <input type="email" placeholder="Enter your email">
-                <button class="subscribe-button">Subscribe</button>
-            </div>
+            
         </footer>
     </div>
     <script src="./script/script.js"></script>
@@ -346,5 +497,15 @@ animateCounterOnScroll("satisfiedClientsCounter", 0, satisfiedClientsTarget, 200
 animateCounterOnScroll("totalClientsCounter", 0, totalClientsTarget, 2000);
 
     </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>

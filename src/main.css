@@ -193,15 +193,49 @@ nav a:hover {
     color: #fff;
     padding: 20px;
     bottom: 0px;
-    display: flex;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
+.foottitle{
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.subscription{
+    width: 100%;
+    text-align: center;
+    background-color: #3498db;
+    padding-left: 40%;
+    padding-right: 40%;
+}
+.footer{
+    padding-bottom: 80px;
+    padding-top: 50px;
+}
 
 .footer .logo img {
     max-width: 100px;
+}
+.tabs{
+    display: flex;
+}
+.tabs ul{
+    width: 30%;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.tabs li{
+    margin-bottom: 10px;
+}
+.tabs ul li i{
+    font-size: 30px;
+    margin-left: 10px;
+    color: white;
 }
 
 .footer .tabs ul {
@@ -224,28 +258,50 @@ nav a:hover {
     color: #ffcc00;
 }
 .subscription{
-    display: grid;
+    display: flex;
+    width: 100%;
 }
-.footer .subscription input[type="email"] {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    width: 200px;
-    margin-bottom: 10px;
+.bribe{
+    width: 50%;
+}
+.broom{
+    width: 50%;
+}
+.subscribeus{
+    width: 100%;
+    display: flex;
+    position: relative;
+    text-align: center;
+}
+.idan{
+    width: 5000px;
+    position: relative;
+    padding-left: 30px;
 }
 
 .footer .subscription .subscribe-button {
-    padding: 10px 20px;
     background-color: #ffcc00;
     color: #333;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 200px;
+    width: 200rem;
     transition: background-color 0.3s;
 }
-
+.bribe .idan{
+    border-radius: 50px;
+    left: 40%;
+    width: 80%;
+    position: relative;
+    padding-left: 30px;
+}
+.broom .buttus{
+    border-radius: 50px;
+    margin-left: 5px;
+    position: relative;
+    top: -13px;
+    left: -80px;
+}
 .footer .subscription .subscribe-button:hover {
     background-color: #333;
     color: #ffcc00;
@@ -289,6 +345,27 @@ nav a:hover {
         position: relative;
         left: 40%;
     }
+    .tabs{
+        display: grid;
+        margin-left: -40px;
+    }
+    .tabs ul{
+        margin-bottom: 20px;
+    }
+    .footer{
+        padding-bottom: -80px;
+    }
+    .subscribeus{
+        display: grid;
+        text-align: center;
+    }
+    .bribe{
+        width: 60%;
+    }
+    .broom{
+        left: 50%;
+        position: relative;
+    }
 
 
 }
@@ -297,3 +374,4 @@ nav a:hover {
 @media (min-width: 769px) and (max-width: 1024px) {
 
 }
+
