@@ -178,33 +178,31 @@ const SubmitContactForm = (e) =>{
     contact_us_form.reset();
 }
 
-// Phrases to display in the loader
-const phrases = ["We", "Are", "Coming"];
-const loadingText = document.getElementById("loading-text");
-let currentIndex = 0;
+  // Phrases to display in the loader
+  const phrases = ["We", "Are", "Clean Image"];
+  const loadingText = document.getElementById("loading-text");
+  let currentIndex = 0;
 
-// Function to update the loading text with the next phrase
-function updateLoadingText() {
-    loadingText.textContent = phrases[currentIndex];
-    currentIndex = (currentIndex + 1) % phrases.length;
-}
+  // Function to update the loading text with the next phrase
+  function updateLoadingText() {
+      loadingText.textContent = phrases[currentIndex];
+      currentIndex = (currentIndex + 1) % phrases.length;
+  }
 
-// Simulate page loading
-function simulatePageLoad() {
-    setTimeout(() => {
-        // Replace this with your actual page load logic
-        // For demonstration, we'll hide the loader after 3 seconds
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("content").style.display = "block";
-    }, 3000); // 3 seconds
-}
+  // Simulate page loading
+  function simulatePageLoad() {
+      setTimeout(() => {
+          // Hide the loader and show the content
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("content").style.display = "block";
+      }, 3000); // 3 seconds (adjust as needed)
+  }
 
-// Start the loader animation
-function startLoader() {
-    setInterval(updateLoadingText, 1000); // Change text every second
-    simulatePageLoad();
-}
+  // Start the loader animation
+  function startLoader() {
+      setInterval(updateLoadingText, 1000); // Change text every second
+      simulatePageLoad();
+  }
 
-// Initialize the loader
-window.onload = startLoader;
-
+  // Initialize the loader
+  window.onload = startLoader;
