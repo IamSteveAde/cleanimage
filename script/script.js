@@ -179,7 +179,7 @@ const SubmitContactForm = (e) =>{
 }
 
 // Phrases to display in the loader
-const phrases = ["CLEAN", "IMAGE", "LIMITED"];
+const phrases = ["We", "Are", "Coming"];
 const loadingText = document.getElementById("loading-text");
 let currentIndex = 0;
 
