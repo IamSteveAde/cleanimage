@@ -686,14 +686,14 @@ button:hover {
     .prev{
         left: 2px;
         
-        top: 80rem;
+        top: 85rem;
         text-align: center;
         background-color: black;
         color: white;
         font-size: 28px;
     }
     .next{
-        top: 80rem;
+        top: 85rem;
         left: 362px;
         background-color: black;
         color: white;
